@@ -1,0 +1,1 @@
+Implement the O(n log n) algorithm for counting inversions. For a list of integers L, a pair of indicesi < j is said an inversion if A[i] > A[j]. Notice that it is possible that A[i] = A[j], this is not counted as an inversion. For example, the list A = [9, 6, 9, 7] has 3 inversions. These inversions are (1, 2), (1, 4), and (3, 4).
