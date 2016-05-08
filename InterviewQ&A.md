@@ -1,15 +1,3 @@
-##Introduce yourself
-My name is Tao Jing. I am currently a third student at the university of Waterloo. My major is Computer Science and Combinatorics and Optimization.
-
-During my study in the university, I learned a various of data structures, algorithms, objected oriented programming and design patterns. My cs major average is over 92, so I believe a have a good understanding of them.
-
-In my previous work experience, I have some experience in web development, back-end and Android Development. I have worked with many SQL and Non-SQL databases such as PostgreSQL and MongDB. I am familiar with C++, Java, JavaScript, python and some JavaScript Framworks such as AngularJS and BackboneJS.
-
-I am hard working, enjoying challenging environment.
-
-That's all about me. Thanks.
-
--
 ###What is inheritance and why do we use inheritance.
 
 **Inheritance** is when a object or class is based on anohter object or class, using the same implementation specifying implementation to maintain the same behavior.
