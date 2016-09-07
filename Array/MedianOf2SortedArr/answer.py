@@ -1,23 +1,27 @@
-def findMedianOf2SortedArr(A, size_A, B, size_B):
-	total = size_A + size_B
-	if total % 2:
-		return k_th(A, size_A, B, size_B, total//2 + 1)
-	else:
-		return k_th(A, size_A, B, size_B, total//2)
+def findMedianOf2SortedArr(A, B):
+	total = len(A) + len(B)
+	return k_th(A, B, total//2 + total % 2)
 
 
-def k_th(A, size_A, B, size_B, k):
-	if m > n:
-		return k_th(B, size_B, A, size_A, k)
-	if m == 0:
-		return B[k - 1]
+def k_th(A, B, k):
+	# assume len(A) > len(B)
+	if len(B) > len(A):
+		return k_th(B, A, k)
+	if len(B) == 0:
+		return A[k]
 	if k == 1:
 		return min(A[0], B[0])
-	a = min(k//2, size_A)
-	b = k - a
-	if A[a - 1] < B[b -1]:
-		return k_th(A[a:], size_A - a, B, size_B, k - a)
-	elif A[a - 1] > B[b -1]:
-		return k_th(A, size_A, B[b:], size_B - b, k - b)
-	else :
-		return A[a - 1]
+
+	if len(A) < k//2:
+		return k_th(A, B[k//2:], k - k//2)
+	elif len(B) < k//2:
+		return k_th(A[k//2:], B, k - k//2)
+	elif A[k//2] > B[k//2]:
+		return k_th(A, B[k//2:], k - k//2)
+	else:
+		return k_th(A[k//2:], B, k - k//2)
+
+
+a = [1,2,3,4,5,6,7] # 7
+b = [3,4,6,8,9,10,12] # 7
+print(findMedianOf2SortedArr(a, b))
